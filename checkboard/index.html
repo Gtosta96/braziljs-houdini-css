@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Houdini CSS</title>
+
+
+  <style>
+      textarea {
+        /* The paint worklet subscribes to changes of these custom properties. */
+        --checkerboard-spacing: 10;
+        --checkerboard-size: 32;
+        background-image: paint(checkerboard);
+      }
+    </style>
+</head>
+<body>
+  <textarea></textarea>
+</body>
+
+<!-- ADICIONAR WORKLET CHECKBOARD -->
+<script>
+  CSS.paintWorklet.addModule('./checkboard.js');
+</script>
+
+</html>
