@@ -1,64 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Layout API - Mansory</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Layout API - Mansory</title>
 
-    <style>
-      body {
-        display: layout(masonry);
-        --padding: 10;
-        --columns: 3;
-      }
+  <style>
+    body {
+      display: layout(masonry);
+      --padding: 10;
+      --columns: 3;
+    }
 
-      div {
-        background-color: hsl(0, 80%, 20%);
-        color: hsl(0, 80%, 95%);
-        font: 12px sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-      }
-    </style>
+    div {
+      background-color: hsl(0, 80%, 20%);
+      color: hsl(0, 80%, 95%);
+      font: 12px sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+  </style>
 
-    <script>
-        CSS.registerProperty({
-          name: '--padding',
-          syntax: '<number>',
-          inherits: false,
-          initialValue: 0,
-        });
-        
-        CSS.registerProperty({
-          name: '--columns',
-          syntax: '<number> | auto',
-          inherits: false,
-          initialValue: 'auto',
-        });
-  
-        CSS.layoutWorklet.addModule('./mansory.js');
-      </script>
+  <script>
+    // CSS.registerProperty({
+    //   name: '--columns',
+    //   syntax: '<number> | auto',
+    //   inherits: false,
+    //   initialValue: 'auto',
+    // });
+
+    CSS.layoutWorklet.addModule('./mansory.js');
+  </script>
 </head>
+
 <body>
-    <div>1 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. </div>
+  <div>1 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. </div>
 
-    <div>2 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret</div>
+  <div>2 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix
+    stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum
+    no. Ius ei dicunt detracto elaboraret. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum
+    ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret</div>
 
-    <div>3 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret.</div>
+  <div>3 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix
+    stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum
+    no. Ius ei dicunt detracto elaboraret.</div>
 
-    <div>4 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret.</div>
+  <div>4 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix
+    stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum
+    no. Ius ei dicunt detracto elaboraret.</div>
 
-    <div>5 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret.</div>
+  <div>5 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix
+    stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum
+    no. Ius ei dicunt detracto elaboraret.</div>
 
-    <div>6 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret.</div>
+  <div>6 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix
+    stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum
+    no. Ius ei dicunt detracto elaboraret.</div>
 
-    <div>7 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret.</div>
+  <div>7 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix
+    stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum
+    no. Ius ei dicunt detracto elaboraret.</div>
 
-    <div>8 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret.</div>
+  <div>8 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix
+    stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum
+    no. Ius ei dicunt detracto elaboraret.</div>
 
-    <div>9 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum no. Ius ei dicunt detracto elaboraret.</div>
+  <div>9 Lorem ipsum dolor sit amet, consul disputando ne his, et vim accumsan ponderum. Rebum deseruisse ex vix. Vix
+    stet honestatis definitionem an, et natum ocurreret cum, semper interpretaris cu mea. Eam saperet fierent luptatum
+    no. Ius ei dicunt detracto elaboraret.</div>
 </body>
+
 </html>

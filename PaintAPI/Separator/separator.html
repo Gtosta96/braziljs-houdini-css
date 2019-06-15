@@ -8,23 +8,21 @@
   <title>Houdini CSS</title>
 
 
-  <style>
-    textarea {
-      /* The paint worklet subscribes to changes of these custom properties. */
-      --checkerboard-spacing: 10;
-      --checkerboard-size: 32;
-      background-image: paint(checkerboard);
-    }
-  </style>
+  <link rel="stylesheet" href="./separator.css">
 </head>
 
 <body>
 
-  <textarea></textarea>
+  <div class="A">
+    <div class="B is-loaded" id="el">
+      <div class="D"></div> We do things.
+    </div>
+    <div class="C"> Very wow. </div>
+  </div>
 
   <!-- ADICIONAR WORKLET CHECKBOARD -->
   <script>
-    CSS.paintWorklet.addModule('./checkboard.js');
+    CSS.paintWorklet.addModule('./separator.js');
   </script>
 </body>
 

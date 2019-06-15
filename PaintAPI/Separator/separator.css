@@ -1,0 +1,46 @@
+.A {
+  width: 250px;
+  height: 350px;
+  margin: 50px auto;
+  background: linear-gradient(#fff 50%, #eee);
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .5), 0 5px 15px rgba(0, 0, 0, .4);
+  resize: both;
+}
+
+.B {
+  height: 200px;
+  padding-bottom: 30px;
+  background-color: hsl(0, 100%, 62%);
+  background-image: linear-gradient(hsl(296, 61%, 26%), hsl(0, 100%, 62%));
+  background-repeat: no-repeat;
+  border-bottom: 1px solid transparent;
+  border-image-source: radial-gradient(closest-corner at 50% -400px, hsl(0, 100%, 62%) 100%, transparent);
+  border-image-slice: 0 0 100% 0;
+  border-image-width: var(--separator-size);
+  border-image-outset: var(--separator-size);
+  border-image-source: paint(separator);
+  --separator-shape: curve-left;
+  --separator-size: 75px;
+  --separator-shadow: .35;
+  --separator-shadow-color: rgba(0, 0, 0, .35);
+}
+
+.B,
+.C {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  font-size: 2em;
+}
+
+.C {
+  height: 150px;
+  color: #222;
+  padding-bottom: 50px;
+  font-size: 1.2em;
+}

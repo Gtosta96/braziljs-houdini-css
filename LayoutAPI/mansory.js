@@ -1,15 +1,15 @@
 // From https://github.com/GoogleChromeLabs/houdini-samples
 
-registerLayout('masonry', class {
+class MansoryLayout {
   static get inputProperties() {
-    return [ '--padding', '--columns' ];
+    return ['--padding', '--columns'];
   }
 
-  *intrinsicSizes() {
-      /* TODO implement :) */
-    }
+  * intrinsicSizes() {
+    /* TODO implement :) */
+  }
 
-  *layout(children, edges, constraints, styleMap) {
+  * layout(children, edges, constraints, styleMap) {
     const inlineSize = constraints.fixedInlineSize;
 
     const padding = parseInt(styleMap.get('--padding'));
@@ -24,7 +24,9 @@ registerLayout('masonry', class {
     // Layout all children with simply their column size.
     const childInlineSize = (inlineSize - ((columns + 1) * padding)) / columns;
     const childFragments = yield children.map((child) => {
-      return child.layoutNextFragment({fixedInlineSize: childInlineSize});
+      return child.layoutNextFragment({
+        fixedInlineSize: childInlineSize
+      });
     });
 
     let autoBlockSize = 0;
@@ -33,11 +35,17 @@ registerLayout('masonry', class {
       // Select the column with the least amount of stuff in it.
       const min = columnOffsets.reduce((acc, val, idx) => {
         if (!acc || val < acc.val) {
-          return {idx, val};
+          return {
+            idx,
+            val
+          };
         }
 
         return acc;
-      }, {val: +Infinity, idx: -1});
+      }, {
+        val: +Infinity,
+        idx: -1
+      });
 
       childFragment.inlineOffset = padding + (childInlineSize + padding) * min.idx;
       childFragment.blockOffset = padding + min.val;
@@ -46,9 +54,14 @@ registerLayout('masonry', class {
       autoBlockSize = Math.max(autoBlockSize, columnOffsets[min.idx] + padding);
     }
 
-    return {autoBlockSize, childFragments};
+    return {
+      autoBlockSize,
+      childFragments
+    };
   }
-});
+}
+
+registerLayout('masonry', MansoryLayout);
 
 /**
  * Copyright 2018 Google Inc. All Rights Reserved.
